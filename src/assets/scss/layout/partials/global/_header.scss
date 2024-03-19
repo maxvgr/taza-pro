@@ -3,17 +3,20 @@
 // -----------------------------------------------------------------------------
 
 #header {
-
 }
 
 .header {
   &__wrapper {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
     margin: 10px 40px;
   }
 
   &__left {
     display: grid;
     grid-template-columns: 135px 1fr;
+    gap: 22px;
     align-items: center;
 
     &-menu {
@@ -21,4 +24,46 @@
     }
   }
 
+  &__right {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-self: end;
+
+    &-contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      a {
+        font-weight: $weight-Regular;
+        font-size: $font-size__text--regular;
+        line-height: 19.5px;
+      }
+    }
+
+    &-callback {
+      .callback {
+        position: relative;
+        padding: 12px 30px;
+        font-weight: $weight-Medium;
+        font-size: $font-size__text--regular;
+        line-height: 19.5px;
+        text-align: center;
+        color: rgba(0, 128, 169, 1);
+
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          border-radius: 188px;
+          padding: 2px;
+          background: linear-gradient(180deg, #0080a9 0%, #8dc63f 100%);
+          -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+          -webkit-mask-composite: xor;
+          mask-composite: exclude;
+        }
+      }
+    }
+  }
 }

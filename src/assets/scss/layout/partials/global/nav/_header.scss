@@ -6,6 +6,9 @@
     }
 
     &__item {
+      font-weight: $weight-Regular;
+      font-size: $font-size__text--big;
+      line-height: 21.94px;
     }
 
     &__link {
