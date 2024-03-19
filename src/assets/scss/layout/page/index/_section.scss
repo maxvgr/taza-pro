@@ -1,3 +1,62 @@
 // -----------------------------------------------------------------------------
 // Фрагмент стилизации какой-то секции
 // -----------------------------------------------------------------------------
+
+.slider__menu {
+  .swiper-slide {
+    position: relative;
+
+    .slide__info {
+      position: absolute;
+      top: 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      &-title {
+        width: 60%;
+        color: $color-text__white;
+        font-weight: 700;
+        font-size: 64px;
+        font-family: $font-second;
+        line-height: 75px;
+        text-align: center;
+      }
+
+      &-text {
+        width: 60%;
+        color: $color-text__white;
+        font-weight: 400;
+        font-size: 24px;
+        font-family: $font-second;
+        line-height: 32px;
+        text-align: center;
+      }
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    border: 1px solid rgba(208, 223, 197, 1);
+    backdrop-filter: blur(3px);
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    color: $palette-white;
+    font-weight: 700;
+    font-size: 26px;
+  }
+
+  .swiper-button-prev {
+    left: var(--swiper-navigation-sides-offset, 110px);
+  }
+
+  .swiper-button-next {
+    right: var(--swiper-navigation-sides-offset, 110px);
+  }
+}

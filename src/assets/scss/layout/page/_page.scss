@@ -15,5 +15,9 @@
 
   &__body {
     overflow: clip;
+
+    .container {
+      padding: 0;
+    }
   }
 }
