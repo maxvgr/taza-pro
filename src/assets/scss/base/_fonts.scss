@@ -2,8 +2,19 @@
 // В этом файле подключаются все шрифты через font-face, если таковые есть
 // -----------------------------------------------------------------------------
 
+@include font-face("Montserrat", "../assets/fonts/Montserrat/Montserrat-Light", 300);
+@include font-face("Montserrat", "../assets/fonts/Montserrat/Montserrat-Regular", 400);
+@include font-face("Montserrat", "../assets/fonts/Montserrat/Montserrat-Medium", 500);
+@include font-face("Montserrat", "../assets/fonts/Montserrat/Montserrat-Bold", 700);
 
-@include font-face("Roboto", "../assets/fonts/Roboto/Roboto-Light", 300);
-@include font-face("Roboto", "../assets/fonts/Roboto/Roboto-Regular", 400);
-@include font-face("Roboto", "../assets/fonts/Roboto/Roboto-Medium", 500);
-@include font-face("Roboto", "../assets/fonts/Roboto/Roboto-Bold", 700);
+@include font-face("NotoSans", "../assets/fonts/NotoSans/notosans-regular", 400);
+@include font-face("NotoSans", "../assets/fonts/NotoSans/notosans-bold", 700);
+
+@include font-face("NunitoSans", "../assets/fonts/NunitoSans/NunitoSans-Regular", 400);
+@include font-face("NunitoSans", "../assets/fonts/NunitoSans/NunitoSans-Bold", 700);
+
+@include font-face("Cygre", "../assets/fonts/Cygre/Cygre-Light", 300);
+@include font-face("Cygre", "../assets/fonts/Cygre/Cygre-Regular", 400);
+@include font-face("Cygre", "../assets/fonts/Cygre/Cygre-Medium", 500);
+@include font-face("Cygre", "../assets/fonts/Cygre/Cygre-Bold", 700);
+

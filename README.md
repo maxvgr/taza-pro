@@ -82,4 +82,4 @@ new-build
 * шрифты находятся в папке ```src/assets/fonts```
     * используйте [форматы](https://caniuse.com/#search=woff) ```.woff``` и ```.woff2```
     * шрифты подключаются в файл ```src/assets/scss/base/_fonts.scss```
-    * сконвертировать локальные шрифты можно с помощью [данного сервиса](https://transfonter.com/)
+    * сконвертировать локальные шрифты можно с помощью [данного сервиса](https://onlineconvertfree.com/ru/convert-format/ttf-to-woff/)

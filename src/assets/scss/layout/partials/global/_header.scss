@@ -7,5 +7,18 @@
 }
 
 .header {
+  &__wrapper {
+    margin: 10px 40px;
+  }
+
+  &__left {
+    display: grid;
+    grid-template-columns: 135px 1fr;
+    align-items: center;
+
+    &-menu {
+      display: flex;
+    }
+  }
 
 }

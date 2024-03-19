@@ -1,6 +1,8 @@
 .nav--header {
   .nav {
     &__list {
+      display: flex;
+      gap: 24px;
     }
 
     &__item {
