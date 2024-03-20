@@ -1,0 +1,71 @@
+.technology {
+  &-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 180px;
+    justify-items: center;
+    padding: 120px 190px;
+    background: url("/src/assets/img/layout/section/technology/bg-left.svg") left 70px no-repeat,
+      url("/src/assets/img/layout/section/technology/bg-right.svg") right 100px no-repeat;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 749px;
+    height: 749px;
+    border-radius: 1000px;
+    background: linear-gradient(219.5deg, rgba(0, 168, 222, 0.2) 10.09%, rgba(176, 255, 65, 0.2) 90.39%);
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 509px;
+      height: 509px;
+      border-radius: 1000px;
+      background: linear-gradient(32.38deg, rgba(0, 128, 169, 0.6) -13.82%, rgba(141, 198, 63, 0.6) 75.36%);
+      font-weight: $weight-Regular;
+      font-size: $font-size__text--large;
+      line-height: 29.26px;
+
+      &--title {
+        padding-left: 70px;
+        font-weight: $weight-Bold;
+        font-size: 256px;
+        font-family: $font-second;
+        line-height: 260.67px;
+
+        sup {
+          top: -1em;
+          font-weight: $weight-Bold;
+          font-size: 123px;
+          line-height: 123px;
+        }
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: $weight-Regular;
+    font-size: $font-size__text--regular;
+    line-height: 24px;
+
+    &-title {
+      padding-bottom: 30px;
+      font-weight: $weight-Bold;
+      font-size: 56px;
+      font-family: $font-second;
+      line-height: 76.27px;
+    }
+
+    .btn-green {
+      margin-top: 45px;
+    }
+  }
+}

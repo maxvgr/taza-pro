@@ -66,9 +66,9 @@ a {
   text-decoration: none;
   transition: $transition ease;
 
-  &:hover {
-    color: $link-hover-color;
-  }
+  // &:hover {
+  //   color: $link-hover-color;
+  // }
 }
 
 picture,
