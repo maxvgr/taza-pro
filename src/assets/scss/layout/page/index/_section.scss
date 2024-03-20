@@ -59,4 +59,64 @@
   .swiper-button-next {
     right: var(--swiper-navigation-sides-offset, 110px);
   }
+
+  .green__menu {
+    position: relative;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 3px;
+    margin-top: -176px;
+
+    &-item {
+      height: 176px;
+      border-radius: 150px 150px 0 0;
+      opacity: 0.9;
+      background: rgba(70, 194, 134, 0.8);
+      transition: $transition ease;
+
+      &:hover {
+        height: 219px;
+        margin-top: -43px;
+        padding-top: 43px;
+        background: linear-gradient(179.93deg, #46C286 0.06%, #0080A9 110.52%);
+        // transition: 0.5s ease;
+
+        picture.active {
+          opacity: 1;
+          transition: .7s ease;
+        }
+
+        picture.first {
+          opacity: 0;
+          transition: $transition ease;
+        }
+      }
+
+      &--link {
+        position: relative;
+        display: grid;
+        grid-template-rows: 115px auto;
+        align-items: end;
+        justify-content: center;
+        justify-items: center;
+        padding-top: 50px;
+        color: $color-text__white;
+
+        picture {
+          position: absolute;
+          justify-self: center;
+          align-self: center;
+        }
+
+        picture.active {
+          opacity: 0;
+        }
+
+        img {
+          max-width: 130px;
+        }
+      }
+    }
+  }
 }
