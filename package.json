@@ -67,7 +67,10 @@
     "yarn-upgrade-all": "^0.7.2"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "swiper": "^11.0.7",
-    "vanilla-lazyload": "^17.8.3"
+    "vanilla-lazyload": "^17.8.3",
+    "viewport-checker": "^2.0.0",
+    "wow.js": "^1.2.2"
   }
 }

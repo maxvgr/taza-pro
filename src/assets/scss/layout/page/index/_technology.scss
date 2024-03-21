@@ -5,8 +5,8 @@
     gap: 180px;
     justify-items: center;
     padding: 120px 190px;
-    background: url("/src/assets/img/layout/section/technology/bg-left.svg") left 70px no-repeat,
-      url("/src/assets/img/layout/section/technology/bg-right.svg") right 100px no-repeat;
+    background: url("../assets/img/layout/section/technology/bg-left.svg") left 70px no-repeat,
+      url("../assets/img/layout/section/technology/bg-right.svg") right 100px no-repeat;
   }
 
   &__left {
@@ -44,6 +44,10 @@
           font-size: 123px;
           line-height: 123px;
         }
+      }
+
+      &--text {
+        text-align: center;
       }
     }
   }

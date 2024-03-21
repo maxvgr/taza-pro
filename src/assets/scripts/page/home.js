@@ -3,6 +3,13 @@ import Swiper from "swiper";
 import 'swiper/css';
 import 'swiper/css/navigation';
 
+// import 'animate.css/animate.css';
+
+import wow from '/node_modules/wow.js';
+new wow().init();
+
+import '/node_modules/wow.js/css/libs/animate.css'
+
 import {
   Navigation,
   Autoplay,
@@ -42,3 +49,8 @@ new Swiper("#home-page .swiper", {
   },
 
 });
+
+
+// const element = document.querySelector('.my-technology__left');
+// element.classList.add('animate__animated', 'animate__bounceIn');
+
