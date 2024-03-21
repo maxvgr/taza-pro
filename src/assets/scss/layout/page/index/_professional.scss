@@ -1,0 +1,34 @@
+.professional {
+  &-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 120px 196px;
+    background: url("../assets/img/layout/section/professional/bg-left.svg") left 100px no-repeat,
+      url("../assets/img/layout/section/professional/bg-right.svg") right 33px no-repeat rgba(238, 246, 231, 1);
+  }
+
+  &__info {
+    &-title {
+      padding-bottom: 24px;
+      font-weight: 700;
+      font-size: 56px;
+      font-family: $font-second;
+      line-height: 76.27px;
+    }
+
+    &-text {
+      font-weight: $weight-Regular;
+      line-height: 24px;
+    }
+
+    .btn-green {
+      margin-top: 45px;
+      padding: 10px 6px 10px 65px;
+
+      &::after {
+        width: 41px;
+        height: 41px;
+      }
+    }
+  }
+}
