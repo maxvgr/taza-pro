@@ -1,0 +1,26 @@
+.trustus {
+  &-wrapper {
+    padding-top: 132px;
+    padding-bottom: 148px;
+    background: url("../assets/img/layout/section/technology/bg-left.svg") left 82px no-repeat,
+      url("../assets/img/layout/section/technology/bg-right.svg") right 112px no-repeat;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 56px;
+    font-family: $font-second;
+    line-height: 76.27px;
+    text-align: center;
+  }
+
+  .swiper {
+    height: 140px;
+    margin-top: 68px;
+
+    &-slide {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

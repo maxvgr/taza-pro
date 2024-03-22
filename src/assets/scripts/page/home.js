@@ -16,7 +16,7 @@ import {
   Mousewheel,
 } from "swiper/modules";
 
-new Swiper("#home-page .swiper", {
+new Swiper(".slider__menu .swiper", {
   modules: [Navigation, Autoplay],
 
   slidesPerView: 1,
@@ -51,6 +51,72 @@ new Swiper("#home-page .swiper", {
 });
 
 
-// const element = document.querySelector('.my-technology__left');
-// element.classList.add('animate__animated', 'animate__bounceIn');
+new Swiper(".news .swiper", {
+  modules: [Navigation, Autoplay],
+
+  slidesPerView: 4,
+  spaceBetween: 30,
+  loop: false,
+
+  breakpoints: {
+
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30
+    },
+    1400: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    }
+  },
+
+  // speed: 52000,
+  // simulateTouch: false,
+
+  // autoplay: false,
+
+  // autoplay: {
+  //   delay: 5000,
+  //   disableOnInteraction: false,
+  // },
+
+  navigation: {
+    nextEl: ".news .swiper-button-next",
+    prevEl: ".news .swiper-button-prev",
+  },
+
+});
+
+
+new Swiper(".trustus .swiper", {
+  modules: [Autoplay],
+
+  slidesPerView: 8,
+  spaceBetween: 30,
+  loop: true,
+
+  // breakpoints: {
+
+  //   768: {
+  //     slidesPerView: 2,
+  //     spaceBetween: 30
+  //   },
+  //   1400: {
+  //     slidesPerView: 3,
+  //     spaceBetween: 30
+  //   }
+  // },
+
+  speed: 1000,
+  // simulateTouch: false,
+
+  // autoplay: false,
+
+  autoplay: {
+    delay: 1000,
+    disableOnInteraction: false,
+  },
+
+
+});
 
