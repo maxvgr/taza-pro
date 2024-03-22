@@ -1,5 +1,14 @@
 .input {
   position: relative;
+  padding: 16px;
+  border-radius: 90px;
+  border: 1px solid rgb(40 40 40 / 10%);
+  outline: none;
+  font-family: $font-third;
+  line-height: 21.82px;
+  letter-spacing: 0.02em;
+  color: rgba(153, 153, 154, 1);
+
 
   &[type="number"] {
     appearance: textfield;
