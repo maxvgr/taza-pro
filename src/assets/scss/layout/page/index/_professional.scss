@@ -1,10 +1,24 @@
 .professional {
+  .container {
+    position: relative;
+    overflow: hidden;
+  }
+
   &-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 120px 196px;
+    // background: url("../assets/img/layout/section/professional/bg-left.svg") left 100px no-repeat,
+    //   url("../assets/img/layout/section/professional/bg-right.svg") right 33px no-repeat rgba(238, 246, 231, 1);
+  }
+
+  .mouse-parallax-bg {
+    position: absolute;
+    z-index: -1;
+    width: 110%;
+    height: 989px;
     background: url("../assets/img/layout/section/professional/bg-left.svg") left 100px no-repeat,
-      url("../assets/img/layout/section/professional/bg-right.svg") right 33px no-repeat rgba(238, 246, 231, 1);
+      url("../assets/img/layout/section/professional/bg-right.svg") right 100px top 33px no-repeat rgba(238, 246, 231, 1);
   }
 
   &__info {

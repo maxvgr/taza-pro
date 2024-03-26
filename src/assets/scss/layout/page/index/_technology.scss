@@ -17,10 +17,10 @@
   .mouse-parallax-bg {
     position: absolute;
     z-index: -1;
-    width: 100%;
+    width: 110%;
     height: 989px;
     background: url("../assets/img/layout/section/technology/bg-left.svg") left 70px no-repeat,
-    url("../assets/img/layout/section/technology/bg-right.svg") right 100px no-repeat;
+    url("../assets/img/layout/section/technology/bg-right.svg") right 100px top 100px no-repeat;
   }
 
   &__left {

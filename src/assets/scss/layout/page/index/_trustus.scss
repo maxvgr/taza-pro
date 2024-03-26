@@ -1,9 +1,23 @@
 .trustus {
+  .container {
+    position: relative;
+    overflow: hidden;
+  }
+
   &-wrapper {
     padding-top: 132px;
     padding-bottom: 148px;
+    // background: url("../assets/img/layout/section/technology/bg-left.svg") left 82px no-repeat,
+    //   url("../assets/img/layout/section/technology/bg-right.svg") right 112px no-repeat;
+  }
+
+  .mouse-parallax-bg {
+    position: absolute;
+    z-index: -1;
+    width: 110%;
+    height: 809px;
     background: url("../assets/img/layout/section/technology/bg-left.svg") left 82px no-repeat,
-      url("../assets/img/layout/section/technology/bg-right.svg") right 112px no-repeat;
+      url("../assets/img/layout/section/technology/bg-right.svg") right 100px top 112px no-repeat;
   }
 
   &-title {
