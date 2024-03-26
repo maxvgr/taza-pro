@@ -4,6 +4,8 @@
 
 #footer {
   .container {
+    position: relative;
+    overflow: hidden;
     padding: 0;
 
     a {
@@ -14,10 +16,19 @@
   }
 }
 
+.mouse-parallax-bg {
+  position: absolute;
+  z-index: -1;
+  width: 110%;
+  height: 909px;
+  background: url("../assets/img/global/footer/bg-right.svg") right 100px top 120px no-repeat rgba(0, 128, 169, 1);
+}
+
 .footer {
   padding: 60px 40px 20px;
   color: $color-text__white;
-  background: url("../assets/img/global/footer/bg-right.svg") right 100px no-repeat rgba(0, 128, 169, 1);
+  // background: url("../assets/img/global/footer/bg-right.svg") right 100px no-repeat rgba(0, 128, 169, 1);
+
 
   .footer-wrapper {
     display: grid;
