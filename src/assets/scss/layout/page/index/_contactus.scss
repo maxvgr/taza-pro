@@ -2,17 +2,36 @@
   .container {
     position: relative;
     overflow: hidden;
+    max-width: 100%;
   }
 
   &-wrapper {
+    @include breakpoint($breakpoint-laptop) {
+      padding: 80px 80px;
+    }
+    @include breakpoint($breakpoint-notebook) {
+      padding: 60px 30px;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      grid-template-columns: 1fr;
+      padding: 40px 15px;
+    }
+
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 120px 200px;
-    // background: url("../assets/img/layout/section/professional/bg-left.svg") left 100px no-repeat,
-    //   url("../assets/img/layout/section/professional/bg-right.svg") right 33px no-repeat rgba(238, 246, 231, 1);
   }
 
   .mouse-parallax-bg {
+    @include breakpoint($breakpoint-notebook) {
+      background-position: left 70px, right 10px top 53px;
+      background-size: 45%, 40%;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      height: 1500px;
+    }
+
     position: absolute;
     z-index: -1;
     width: 110%;
@@ -22,6 +41,17 @@
   }
 
   &__address {
+    @include breakpoint($breakpoint-laptop) {
+      padding-right: 86px;
+    }
+    @include breakpoint($breakpoint-notebook) {
+      padding-top: 70px;
+      padding-right: 15px;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      padding-right: 0;
+    }
+
     display: flex;
     flex-direction: column;
     padding-top: 100px;
@@ -29,6 +59,16 @@
     border-radius: 16px;
 
     p {
+      @include breakpoint($breakpoint-notebook) {
+        line-height: 20px;
+        padding: 15px 20px 15px 68px;
+      }
+      @include breakpoint($breakpoint-tablet) {
+        min-height: 80px;
+        padding: 15px 20px 15px 68px;
+        line-height: 20px;
+      }
+
       position: relative;
       display: flex;
       flex-direction: column;
@@ -51,12 +91,23 @@
       }
 
       b {
+        @include breakpoint($breakpoint-notebook) {
+          font-size: 18px;
+          line-height: 22px;
+        }
+
         font-weight: 700;
         font-size: 32px;
         line-height: 48px;
       }
 
       &::before {
+        @include breakpoint($breakpoint-notebook) {
+          width: 36px;
+          height: 36px;
+          background-size: 45%;
+        }
+
         content: "";
         position: absolute;
         left: 20px;
@@ -97,6 +148,18 @@
 
   &__form {
     &-title {
+      @include breakpoint($breakpoint-notebook) {
+        position: absolute;
+        left: 30px;
+        font-size: 32px;
+        line-height: 43px;
+      }
+      @include breakpoint($breakpoint-tablet) {
+        top: 0;
+        left: 15px;
+        margin-top: 40px;
+      }
+
       font-weight: 700;
       font-size: 56px;
       font-family: $font-second;
@@ -104,6 +167,13 @@
     }
 
     &-form {
+      @include breakpoint($breakpoint-notebook) {
+        margin-top: 70px;
+      }
+      @include breakpoint($breakpoint-tablet) {
+        margin-top: 20px;
+      }
+
       display: flex;
       flex-direction: column;
       gap: 16px;

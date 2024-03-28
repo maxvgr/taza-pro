@@ -6,13 +6,26 @@
   }
 
   &-wrapper {
+    @include breakpoint($breakpoint-notebook) {
+      padding-top: 58px;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      padding: 40px 0;
+    }
+
     padding-top: 132px;
     padding-bottom: 148px;
-    // background: url("../assets/img/layout/section/technology/bg-left.svg") left 82px no-repeat,
-    //   url("../assets/img/layout/section/technology/bg-right.svg") right 112px no-repeat;
   }
 
   .mouse-parallax-bg {
+    @include breakpoint($breakpoint-notebook) {
+      background-position: left 30px, right 100px top 80px;
+      background-size: 15%, 50%;
+    }
+    @include breakpoint($breakpoint-mobile) {
+      background-position: left 30px, right 10px top 80px;
+    }
+
     position: absolute;
     z-index: -1;
     width: 110%;
@@ -22,6 +35,13 @@
   }
 
   &-title {
+    @include breakpoint($breakpoint-notebook) {
+      padding-left: 31px;
+      font-size: 32px;
+      line-height: 43px;
+      text-align: left;
+    }
+
     font-weight: 700;
     font-size: 56px;
     font-family: $font-second;
@@ -30,6 +50,10 @@
   }
 
   .swiper {
+    @include breakpoint($breakpoint-mobile) {
+      margin-top: 24px;
+    }
+
     height: 140px;
     margin-top: 68px;
 

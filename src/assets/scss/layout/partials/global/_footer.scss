@@ -7,6 +7,7 @@
     // position: relative;
     // overflow: hidden;
     padding: 0;
+    max-width: 100%;
 
     a {
       &:hover {
@@ -25,14 +26,39 @@
 // }
 
 .footer {
+  @include breakpoint($breakpoint-notebook) {
+    padding: 40px 30px 20px;
+    background-position: right top 153px;
+  }
+  @include breakpoint($breakpoint-tablet) {
+    padding: 40px 15px 20px;
+    background-position: right -250px top 153px;
+  }
+
   padding: 60px 40px 20px;
   color: $color-text__white;
   background: url("../assets/img/global/footer/bg-right.svg") right 100px no-repeat rgba(0, 128, 169, 1);
 
   .footer-wrapper {
+    @include breakpoint($breakpoint-notebook) {
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 40px;
+  }
+
+  &__left {
+    @include breakpoint($breakpoint-tablet) {
+      padding-bottom: 16px;
+      border-bottom: 1px solid $palette-green;
+    }
   }
 
   &__address {
@@ -103,10 +129,52 @@
     }
   }
 
+  &__catalog {
+    @include breakpoint($breakpoint-notebook) {
+      grid-row: 1/2;
+      grid-column: 2/3;
+      padding-top: 0;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      grid-row: auto;
+      grid-column: auto;
+    }
+  }
+
+  &__menu {
+    @include breakpoint($breakpoint-notebook) {
+      grid-row: 2/3;
+      grid-column: 2/3;
+      padding-top: 0;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      grid-row: auto;
+      grid-column: auto;
+    }
+  }
+
   &__right {
+    @include breakpoint($breakpoint-notebook) {
+      grid-row: 2/3;
+      grid-column: 1/2;
+      justify-self: start;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      grid-row: auto;
+      grid-column: auto;
+    }
+
     justify-self: end;
 
     &-wrapper {
+      @include breakpoint($breakpoint-notebook) {
+        align-items: start;
+        margin-top: -100px;
+      }
+      @include breakpoint($breakpoint-tablet) {
+        margin-top: 0;
+      }
+
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -157,6 +225,13 @@
   }
 
   &__copyright {
+    @include breakpoint($breakpoint-notebook) {
+      grid-template-columns: 2fr 1fr;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      grid-template-columns: 1fr;
+    }
+
     display: grid;
     grid-template-columns: auto 1fr;
     margin-top: 32px;
@@ -169,6 +244,11 @@
     }
 
     &-right {
+      @include breakpoint($breakpoint-tablet) {
+        padding-top: 20px;
+        text-align: left;
+      }
+
       font-family: $font-fourth;
       line-height: 25.31px;
       text-align: right;
