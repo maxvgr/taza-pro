@@ -1,11 +1,24 @@
 .nav--header {
+  @include breakpoint($breakpoint-notebook) {
+    display: none;
+    width: 0;
+  }
+
   .nav {
     &__list {
+      @include breakpoint($breakpoint-laptop) {
+        gap: 10px;
+      }
+
       display: flex;
       gap: 24px;
     }
 
     &__item {
+      @include breakpoint($breakpoint-laptop) {
+        font-size: $font-size__text--regular;;
+      }
+
       font-weight: $weight-Regular;
       font-size: $font-size__text--big;
       line-height: 21.94px;

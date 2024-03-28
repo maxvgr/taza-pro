@@ -1,12 +1,30 @@
 .nav--mobile {
+  position: absolute;
+  z-index: 100;
+  top: 60px;
+  left: -500px;
+  padding: 21px 15px;
+  background: $palette-white;
+  transition: 0.5s ease;
+
+  &.is-active {
+    left: 0;
+  }
+
   .nav {
     &__list {
     }
 
     &__item {
+      padding: 12px 30px 12px 0;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $palette-green;
+      }
     }
 
     &__link {
+      padding-right: 30px;
     }
   }
 }
