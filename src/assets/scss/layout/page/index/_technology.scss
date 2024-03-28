@@ -25,9 +25,6 @@
       grid-template-columns: 1fr;
       padding-top: 80px;
     }
-    // @include breakpoint($breakpoint-mobile) {
-    //   padding-top: 60px;
-    // }
 
     position: relative;
     display: grid;
@@ -41,10 +38,13 @@
     @include breakpoint($breakpoint-laptop) {
       background-size: 15%, 40%;
     }
+    @include breakpoint($breakpoint-notebook) {
+      background-position: left 70px, right 10px top 80px;
+    }
     @include breakpoint($breakpoint-tablet) {
-      background-size: 25%, 40%;
       width: 140%;
       height: 689px;
+      background-size: 25%, 40%;
     }
 
     position: absolute;

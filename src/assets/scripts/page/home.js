@@ -23,20 +23,7 @@ new Swiper(".slider__menu .swiper", {
   spaceBetween: 0,
   loop: false,
 
-  // breakpoints: {
-
-  //   768: {
-  //     slidesPerView: 1,
-  //     spaceBetween: 0
-  //   },
-  //   1400: {
-  //     slidesPerView: 1,
-  //     spaceBetween: 0
-  //   }
-  // },
-
   speed: 2000,
-  // simulateTouch: false,
 
   autoplay: {
     delay: 5000,
@@ -61,24 +48,14 @@ new Swiper(".news .swiper", {
   breakpoints: {
 
     768: {
-      slidesPerView: 2,
+      slidesPerView: 4,
       spaceBetween: 30
     },
     1400: {
-      slidesPerView: 3,
+      slidesPerView: 4,
       spaceBetween: 30
     }
   },
-
-  // speed: 52000,
-  // simulateTouch: false,
-
-  // autoplay: false,
-
-  // autoplay: {
-  //   delay: 5000,
-  //   disableOnInteraction: false,
-  // },
 
   navigation: {
     nextEl: ".news .swiper-button-next",
@@ -91,21 +68,24 @@ new Swiper(".news .swiper", {
 new Swiper(".trustus .swiper", {
   modules: [Autoplay],
 
-  slidesPerView: 8,
+  slidesPerView: 4,
   spaceBetween: 30,
   loop: true,
 
-  // breakpoints: {
-
-  //   768: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 30
-  //   },
-  //   1400: {
-  //     slidesPerView: 3,
-  //     spaceBetween: 30
-  //   }
-  // },
+  breakpoints: {
+    540: {
+      slidesPerView: 4,
+      spaceBetween: 30
+    },
+    768: {
+      slidesPerView: 6,
+      spaceBetween: 30
+    },
+    1200: {
+      slidesPerView: 8,
+      spaceBetween: 30
+    }
+  },
 
   speed: 1000,
   // simulateTouch: false,

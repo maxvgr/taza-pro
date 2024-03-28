@@ -2,9 +2,20 @@
   .container {
     position: relative;
     overflow: hidden;
+    max-width: 100%;
   }
 
   &-wrapper {
+    @include breakpoint($breakpoint-laptop) {
+      padding: 100px 0 100px 80px;
+    }
+    @include breakpoint($breakpoint-notebook) {
+      padding: 80px 0 80px 30px;
+    }
+    @include breakpoint($breakpoint-tablet) {
+      padding: 40px 0 40px 15px;
+    }
+
     // position: relative;
     // z-index: -2;
     // display: grid;
@@ -14,6 +25,13 @@
   }
 
   .mouse-parallax-bg {
+    @include breakpoint($breakpoint-laptop) {
+      background-position: left 100px, right 10px top 52px;
+    }
+    @include breakpoint($breakpoint-notebook) {
+      background-size: 35%, 15%;
+    }
+
     position: absolute;
     z-index: -1;
     width: 110%;
@@ -23,17 +41,38 @@
   }
 
   &__info {
+    @include breakpoint($breakpoint-notebook) {
+      width: auto;
+    }
+
     width: 590px;
     padding-bottom: 60px;
     color: $color-text__white;
 
     &-wrap {
+      @include breakpoint($breakpoint-notebook) {
+        grid-template-columns: 3fr 1fr;
+      }
+      @include breakpoint($breakpoint-tablet) {
+        grid-template-columns: 1fr;
+        justify-items: start;
+      }
+
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
     }
 
     &-title {
+      @include breakpoint($breakpoint-notebook) {
+        font-size: 32px;
+        line-height: 43px;
+      }
+      @include breakpoint($breakpoint-tablet) {
+        font-size: 24px;
+        line-height: 32px;
+      }
+
       padding-bottom: 30px;
       font-weight: 700;
       font-size: 56px;
@@ -49,6 +88,14 @@
 
   .swiper {
     &-slide {
+      @include breakpoint($breakpoint-notebook) {
+        width: 320px !important;
+        height: 424px;
+      }
+      @include breakpoint($breakpoint-tablet) {
+        width: 290px !important;
+      }
+
       position: relative;
       width: 437px !important;
       height: 516px;
@@ -61,9 +108,17 @@
 
       picture {
         img {
-          border-radius: 20px;
-          height: 516px;
+          @include breakpoint($breakpoint-notebook) {
+            width: 320px;
+            height: 424px;
+          }
+          @include breakpoint($breakpoint-tablet) {
+            width: 290px;
+          }
+
           width: 437px;
+          height: 516px;
+          border-radius: 20px;
         }
       }
 
@@ -106,6 +161,10 @@
         }
 
         &-title {
+          @include breakpoint($breakpoint-notebook) {
+            margin-top: 200px;
+          }
+
           margin-top: 300px;
           padding-bottom: 8px;
           font-weight: 700;
@@ -153,6 +212,9 @@
     .swiper-button-prev,
     .swiper-button-next {
       position: relative;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 40px;
       background: rgba(255, 255, 255, 0.1);
     }
   }
