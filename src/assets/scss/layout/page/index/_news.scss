@@ -211,9 +211,14 @@
 
     .swiper-button-prev,
     .swiper-button-next {
+      @include breakpoint($breakpoint-notebook) {
+        width: 48px;
+        height: 48px;
+      }
+
       position: relative;
-      width: 48px;
-      height: 48px;
+      width: 80px;
+      height: 80px;
       margin-bottom: 40px;
       background: rgba(255, 255, 255, 0.1);
     }
