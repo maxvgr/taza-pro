@@ -41,12 +41,19 @@ new Swiper(".slider__menu .swiper", {
 new Swiper(".news .swiper", {
   modules: [Navigation, Autoplay],
 
-  slidesPerView: 4,
+  slidesPerView: 1,
   spaceBetween: 30,
-  loop: false,
+  loop: true,
 
   breakpoints: {
-
+    360: {
+      slidesPerView: 2,
+      spaceBetween: 30
+    },
+    540: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    },
     768: {
       slidesPerView: 4,
       spaceBetween: 30
@@ -55,6 +62,12 @@ new Swiper(".news .swiper", {
       slidesPerView: 4,
       spaceBetween: 30
     }
+  },
+
+  speed: 1500,
+  autoplay: {
+    delay: 1500,
+    disableOnInteraction: true,
   },
 
   navigation: {
